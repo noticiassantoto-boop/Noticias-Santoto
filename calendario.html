@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario — Santoto Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">       
+      <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+      <div class="nav-brand-text">
+        <span class="nav-name">Santoto Noticias</span><span class="nav-sub">Colegio Santo Tomás de Aquino</span></div></a>
+         
+        <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="gobierno.html" class="nav-link">Gobierno</a>
+        <a href="deportes.html" class="nav-link">Deportes</a>
+        <a href="calendario.html" class="nav-link active">Calendario</a>
+        <a href="sugerencias.html" class="nav-link">Buzón</a>
+        <a href="especialidades.html" class="nav-link">Especialidad</a>
+        <a href="chatbot.html" class="nav-link"> Asistente</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="page-header page-header-azul"><div class="container"><div class="page-eyebrow">Agenda 2026</div><h1 class="page-title" style="color: white;">Calendario</h1><p class="page-eyebrow">Eventos, fechas importantes y actividades del colegio.</p></div></div>
+  <div class="container" style="padding-top:40px;padding-bottom:60px">
+    <div class="cal-layout">
+      <div class="cal-grid-wrap">
+        <div class="cal-header-web">
+          <button class="cal-btn-nav" onclick="calCambiarMes(-1)">‹</button>
+          <h2 class="cal-mes-titulo" id="cal-mes-titulo"></h2>
+          <button class="cal-btn-nav" onclick="calCambiarMes(1)">›</button>
+        </div>
+        <div class="cal-semana-labels">
+          <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+        </div>
+        <div class="cal-days-grid" id="cal-days"></div>
+      </div>
+      <div class="cal-eventos-panel">
+        <div class="cal-panel-title" id="cal-panel-title">Todos los eventos del mes</div>
+        <div id="cal-eventos-lista"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>© 2026 Noticiero Estudiantil</span></div></div></footer>
+  <script src="data.js"></script><script src="main.js"></script>
+</body>
+</html>

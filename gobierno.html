@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gobierno Estudiantil — Santoto Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+    <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+        <div class="nav-brand-text">
+          <span class="nav-name">Santoto Noticias</span>
+          <span class="nav-sub">Colegio Santo Tomás de Aquino</span>
+        </div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="gobierno.html" class="nav-link active">Gobierno</a>
+        <a href="deportes.html" class="nav-link">Deportes</a>
+        <a href="calendario.html" class="nav-link">Calendario</a>
+        <a href="sugerencias.html" class="nav-link">Buzón</a>
+        <a href="especialidades.html" class="nav-link">Especialidad</a>
+        <a href="chatbot.html" class="nav-link">Asistente</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-header page-header-azul">
+    <div class="container">
+      <div class="page-eyebrow">2026</div>
+      <h1 class="page-title" style="color:#fff">Gobierno Estudiantil</h1>
+      <p class="page-desc" style="color:rgba(255,255,255,.7)">Conoce a los representantes elegidos democráticamente por la comunidad estudiantil.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:60px">
+
+    <!-- TABS -->
+    <div class="gov-tabs-web" id="gov-tabs">
+      <button class="gtab active" data-filtro="todos" onclick="filtrarGob('todos',this)">Todos</button>
+      <button class="gtab" data-filtro="personero" onclick="filtrarGob('personero',this)">Personero</button>
+      <button class="gtab" data-filtro="contralor" onclick="filtrarGob('contralor',this)">Contralores</button>
+      <button class="gtab" data-filtro="candidato" onclick="filtrarGob('representantes',this)">Representantes</button>
+    </div>
+
+    <!-- PERSONERO — hero -->
+    <div id="personero-section"></div>
+
+    <!-- OTROS -->
+    <div class="personas-web-grid" id="personas-grid"></div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="justify-content:center">
+        <span>© 2026 Noticiero Estudiantil — Colegio Santo Tomás de Aquino</span>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
