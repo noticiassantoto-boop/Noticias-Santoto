@@ -284,16 +284,30 @@ sugerencias: [],
 
 function loadData() {
   try {
-    const s = localStorage.getItem('sn_web_v1');
-    if (s) {
-      const p = JSON.parse(s);
-      if (!p.gobierno) p.gobierno = JSON.parse(JSON.stringify(DEFAULT_DATA.gobierno));
-      return p;
+    const guardado = localStorage.getItem('sn_web_v1');
+    const local = guardado ? JSON.parse(guardado) : {};
+
+    // Los datos publicados en data.js siempre tienen prioridad.
+    const datos = JSON.parse(JSON.stringify(DEFAULT_DATA));
+
+    // Conservamos solamente las sugerencias guardadas en el dispositivo.
+    if (Array.isArray(local.sugerencias)) {
+      datos.sugerencias = local.sugerencias;
     }
+
+    return datos;
+
+  } catch(e) {
     return JSON.parse(JSON.stringify(DEFAULT_DATA));
-  } catch(e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+  }
 }
-function saveData(d) { localStorage.setItem('sn_web_v1', JSON.stringify(d)); }
+
+function saveData(d) {
+  // Solo guardamos las sugerencias localmente.
+  localStorage.setItem('sn_web_v1', JSON.stringify({
+    sugerencias: d.sugerencias || []
+  }));
+}
 
 // Disponible globalmente
 const DATA = loadData();
