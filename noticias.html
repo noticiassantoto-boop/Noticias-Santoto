@@ -74,7 +74,19 @@
     </div>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="main.js?v=2"></script>
+<script>
+  const version = Date.now();
+
+  const dataScript = document.createElement('script');
+  dataScript.src = 'data.js?v=' + version;
+
+  dataScript.onload = function() {
+    const mainScript = document.createElement('script');
+    mainScript.src = 'main.js?v=' + version;
+    document.body.appendChild(mainScript);
+  };
+
+  document.body.appendChild(dataScript);
+</script>
 </body>
 </html>
