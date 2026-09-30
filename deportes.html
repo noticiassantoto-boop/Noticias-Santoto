@@ -38,6 +38,19 @@
     <div id="deportes-full"></div>
   </div>
   <footer class="footer"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>© 2026 Noticiero Estudiantil</span></div></div></footer>
-  <script src="data.js"></script><script src="main.js"></script>
+<script>
+  const version = Date.now();
+
+  const dataScript = document.createElement('script');
+  dataScript.src = 'data.js?v=' + version;
+
+  dataScript.onload = function() {
+    const mainScript = document.createElement('script');
+    mainScript.src = 'main.js?v=' + version;
+    document.body.appendChild(mainScript);
+  };
+
+  document.body.appendChild(dataScript);
+</script>
 </body>
 </html>
