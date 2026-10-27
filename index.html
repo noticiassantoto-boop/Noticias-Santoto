@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santoto Noticias — Colegio Santo Tomás de Aquino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+       <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+        <div class="nav-brand-text">
+          <span class="nav-name">Santoto Noticias</span>
+          <span class="nav-sub">Colegio Santo Tomás de Aquino</span>
+        </div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="gobierno.html" class="nav-link">Gobierno</a>
+        <a href="deportes.html" class="nav-link">Deportes</a>
+        <a href="calendario.html" class="nav-link">Calendario</a>
+        <a href="sugerencias.html" class="nav-link">Buzón</a>
+        <a href="especialidades.html" class="nav-link">Especialidad</a>
+        <a href="chatbot.html" class="nav-link"> Asistente</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-lines"></div>
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="dot"></span> Noticiero Estudiantil · 2026
+      </div>
+      <h1 class="hero-title">Todo lo que pasa<br><em>en tu colegio</em></h1>
+      <p class="hero-desc">Noticias, eventos, gobierno estudiantil y más del Colegio Santo Tomás de Aquino, Duitama.</p>
+      <div class="hero-actions">
+        <a href="noticias.html" class="btn-primary">Ver noticias →</a>
+        <a href="gobierno.html" class="btn-ghost">Gobierno estudiantil</a>
+      </div>
+    </div>
+    <div class="hero-strip"></div>
+  </section>
+
+  <!-- HIGHLIGHTS BAR -->
+  <div class="highlights-bar">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <div class="hi-icon">🏆</div>
+          <div class="hi-text">
+            <strong>Ranking Milton Ochoa</strong>
+            <span>Top colegios públicos de Duitama 2024–2025</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">🏗️</div>
+          <div class="hi-text">
+            <strong>$4.500 millones</strong>
+            <span>Inversión en infraestructura institucional</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">🎤</div>
+          <div class="hi-text">
+            <strong>Festival Estrella de Oro</strong>
+            <span>Destacada participación estudiantil</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">🤖</div>
+          <div class="hi-text">
+            <strong>Tecnología 4.0</strong>
+            <span>Semilleros de investigación activos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-grid container">
+
+    <!-- COLUMNA PRINCIPAL -->
+    <div class="col-main">
+
+      <div class="section-label">Noticias destacadas</div>
+
+      <!-- NOTICIA GRANDE -->
+      <article class="noticia-hero" onclick="location.href='noticias.html'">
+        <div class="nh-img">
+          <div class="nh-img-inner">
+            <img src="IMG/colegio.jpeg" alt="Infraestructura" loading="lazy">
+          </div>
+          <div class="nh-cat-badge">Infraestructura</div>
+        </div>
+        <div class="nh-body">
+          <div class="nh-meta">
+            <span class="nh-date">15 Mar 2025</span>
+          </div>
+          <h2 class="nh-title">Inversión de $4.500 millones en infraestructura del colegio</h2>
+          <p class="nh-excerpt">La administración municipal ha invertido más de $4.500 millones de pesos en la ampliación y mejora de las instalaciones del Colegio Santo Tomás de Aquino, incluyendo nuevas aulas, laboratorios y espacios deportivos.</p>
+          <span class="nh-read">Leer más →</span>
+        </div>
+      </article>
+
+      <!-- GRID NOTICIAS SECUNDARIAS -->
+      <div class="noticias-grid" id="noticias-grid">
+        <!-- Se llena con JS -->
+      </div>
+
+      <div class="section-label" style="margin-top:48px">Deportes</div>
+      <div class="deportes-list" id="deportes-list">
+        <!-- Se llena con JS -->
+      </div>
+
+    </div>
+     
+    <!-- SIDEBAR -->
+    <aside class="col-side">
+
+      <!-- GOBIERNO ESTUDIANTIL -->
+      <div class="widget">
+        <div class="widget-title">
+          <span>🏛️</span> Gobierno Estudiantil
+        </div>
+        <div id="gov-widget">
+          <!-- Se llena con JS -->
+        </div>
+        <a href="gobierno.html" class="widget-link">Ver todos →</a>
+      </div>
+    </aside>
+  </main>
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+       <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+          <div>
+            <div class="footer-name">Santoto Noticias</div>
+            <div class="footer-sub">Colegio Santo Tomás de Aquino · Duitama, Boyacá</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="noticias.html">Noticias</a>
+          <a href="gobierno.html">Gobierno</a>
+          <a href="deportes.html">Deportes</a>
+          <a href="calendario.html">Calendario</a>
+          <a href="sugerencias.html">Buzón</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Noticiero Estudiantil — Colegio Santo Tomás de Aquino</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

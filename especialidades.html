@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialidades — Santoto Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+        <div class="nav-brand-text">
+          <span class="nav-name">Santoto Noticias</span>
+          <span class="nav-sub">Colegio Santo Tomás de Aquino</span>
+        </div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="gobierno.html" class="nav-link">Gobierno</a>
+        <a href="deportes.html" class="nav-link">Deportes</a>
+        <a href="calendario.html" class="nav-link">Calendario</a>
+        <a href="sugerencias.html" class="nav-link">Buzón</a>
+        <a href="especialidades.html" class="nav-link active">Especialidad</a>
+        <a href="chatbot.html" class="nav-link">Asistente</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-header page-header-azul">
+    <div class="container">
+      <div class="page-eyebrow">Formación Técnica</div>
+      <h1 class="page-title" style="color: white;">Especialidad</h1>
+      <p class="page-eyebrow">Conoce la especialidad técnica que ofrece el Colegio Santo Tomás de Aquino.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:72px">
+
+    <div class="section-label" style="margin-bottom:28px">Taller de Informática</div>
+
+    <!-- HERO -->
+    <div class="esp-hero">
+      <div class="esp-icon-wrap">@</div>
+      <div class="esp-hero-body">
+        <h2>Taller de Informática</h2>
+        <p>En el Taller de Informática se orienta al estudiante sobre el uso de los sistemas informáticos en todos los campos de la educación, el trabajo y las necesidades del ser Humano, utilizando el computador como medio facilitador. De esta manera se incentiva la creatividad y el sentido de innovación de conocimientos.</p>
+        <p>En las actividades, se hace énfasis en el conocimiento y manejo de diferentes tipos de software, para la sistematización de la información, es decir, organizarla a partir de la creatividad. Para ello, se incentiva el buen uso de las tecnologías de la información y comunicación (TIC).</p>
+        <p>Además, cuenta con el programa de articulación con el SENA, que ofrece los lineamientos técnicos y tecnológicos para lograr un proceso de formación profesional. En el grado undécimo los estudiantes reciben el certificado que los acredita como <strong>técnicos en sistemas teleinformaticos</strong>.</p>
+      </div>
+    </div>
+
+    <!-- TARJETAS -->
+    <div class="esp-cards-list">
+
+      <!-- INTRODUCCIÓN -->
+      <div class="esp-card" id="esp-intro" onclick="toggleEsp('esp-intro')">
+        <button class="esp-card-trigger">
+          <span class="esp-card-icon">📖</span>
+          <div class="esp-card-body">
+            <div class="esp-card-titulo">Introducción</div>
+            <div class="esp-card-desc">Conoce el enfoque y propósito del Taller de Informática</div>
+            <div class="esp-card-meta">
+              <span class="esp-card-badge">Taller de Informática</span>
+            </div>
+          </div>
+          <span class="esp-card-arrow">›</span>
+        </button>
+        <div class="esp-card-expand">
+          <div class="esp-card-inner">
+            <p>En el Taller de Informática se orienta al estudiante sobre el uso de los sistemas informáticos en todos los campos de la educación, el trabajo y las necesidades del ser Humano, utilizando el computador como medio facilitador. De esta manera se incentiva la creatividad y el sentido de innovación de conocimientos.</p>
+            <p>En las actividades, se hace énfasis en el conocimiento y manejo de diferentes tipos de software, para la sistematización de la información, es decir, organizarla a partir de la creatividad. Para ello, se incentiva el buen uso de las tecnologías de la información y comunicación (TIC).</p>
+            <p>Además, cuenta con el programa de articulación con el SENA, que ofrece los lineamientos técnicos y tecnológicos para lograr un proceso de formación profesional. Tal cooperación es integral para que sus estudiantes adquieran las habilidades necesarias para la competencia laboral en el desarrollo y mantenimiento de redes y computadores. En el grado undécimo los estudiantes reciben el certificado que los acredita como técnicos en sistemas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOCENTE -->
+      <div class="esp-card" id="esp-docente" onclick="toggleEsp('esp-docente')">
+        <button class="esp-card-trigger">
+          <span class="esp-card-icon">🎓</span>
+          <div class="esp-card-body">
+            <div class="esp-card-titulo">Docente Encargado</div>
+            <div class="esp-card-desc">Conoce al docente responsable de la especialidad</div>
+            <div class="esp-card-meta">
+              <span class="esp-card-badge">Taller de Informática</span>
+            </div>
+          </div>
+          <span class="esp-card-arrow">›</span>
+        </button>
+        <div class="esp-card-expand">
+          <div class="esp-card-inner">
+            <div class="docente-card">
+              <div class="docente-avatar">👨‍🏫</div>
+              <div class="docente-info">
+                <strong>Silvino Antonio Castañeda Rincon</strong>
+                <span>Licenciado en Informática · Taller de Informática</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERFIL -->
+      <div class="esp-card" id="esp-perfil" onclick="toggleEsp('esp-perfil')">
+        <button class="esp-card-trigger">
+          <span class="esp-card-icon">👨‍💻</span>
+          <div class="esp-card-body">
+            <div class="esp-card-titulo">Sena</div>
+            <div class="esp-card-desc">Habilidades y competencias del estudiante de Sena</div>
+            <div class="esp-card-meta">
+              <span class="esp-card-badge">Tecnico en Sistemas Teleinformaticos</span>
+            </div>
+          </div>
+          <span class="esp-card-arrow">›</span>
+        </button>
+        <div class="esp-card-expand">
+          <div class="esp-card-inner">
+            <p>El Colegio cuenta con la articulacion del sena, este ofrece el curso Tecnico en Sistemas Teleinformaticos, se mostraran las competencias tecnicas.</p>
+            <ul class="perfil-lista">
+              <li><span class="pi-icon">💻</span><div class="pi-text"><strong>  Mantenimiento Equipos de Computo</strong><span>Las guías de formación tratan diferentes aspectos relacionados con el <b>mantenimiento de equipos de cómputo</b>. Primero se estudian los recursos necesarios, como herramientas, instrumentos, componentes electrónicos y conceptos básicos de electricidad y electrónica. También se explican las <b>normas de seguridad</b>, la organización del lugar de trabajo y las medidas para prevenir accidentes.
+
+             Luego se reconocen los <b> internos y externos del computador</b>, como motherboard, procesador, memoria RAM, disco duro, fuente de poder, tarjetas, puertos y periféricos, comprendiendo la función de cada uno. También se trabajan los diferentes tipos de mantenimiento, la limpieza y el diagnóstico de posibles fallas.
+
+             Finalmente, las guías incluyen temas relacionados con el <b>ensamble y desensamble</b>, mantenimiento preventivo y correctivo, instalación y manejo básico de sistemas operativos y programas. En general, todas buscan desarrollar conocimientos y habilidades para realizar el mantenimiento de computadores de manera <b>organizada, segura y siguiendo procedimientos técnicos</b>. <br>
+            
+              <b>Se mostraran fotos del mantenimiento preventivo de hardware </b>
+
+             
+           <div class="img-man-com"><img src="IMG/Mantenimiento 1.jpg" >
+             <img src="IMG/Mantenimiento 2.jpg"> </div>
+
+</span></div></li>
+  <li><span class="pi-icon">💻</span><div class="pi-text"><strong>  Evaluar Red de Datos</strong><span>Las guías de formación tratan diferentes aspectos relacionados con las <b>redes informáticas.</b> Primero se estudian los conceptos básicos, tipos de redes, topologías, medios de transmisión y dispositivos como switches y routers. También se trabajan las normas T568A y T568B, la elaboración de cables UTP, conectores RJ45 y pruebas con tester. Luego se aprende a configurar redes, asignar direcciones IP y realizar prácticas en Packet Tracer. Finalmente, se estudian diferentes comandos de red como ping, ipconfig y tracert para comprobar la conectividad y diagnosticar fallas. En general, las guías buscan desarrollar habilidades para instalar, configurar y verificar redes de manera organizada y siguiendo procedimientos. <br>
+            
+       <b>Practicas en Packet Tracer</b>
+
+             
+           <div class="img-pra-pac">
+            <img src="IMG/practica 1.jpg" >
+          <img src="IMG/practica 2.jpg" >
+           </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+   <footer class="footer"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>© 2026 Noticiero Estudiantil</span></div></div></footer>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    function toggleEsp(id) {
+      const card = document.getElementById(id);
+      const isOpen = card.classList.contains('open');
+      document.querySelectorAll('.esp-card').forEach(c => c.classList.remove('open'));
+      if (!isOpen) card.classList.add('open');
+    }
+  </script>
+</body>
+</html>

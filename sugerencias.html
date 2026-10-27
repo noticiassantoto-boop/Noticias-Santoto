@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzón de Sugerencias — Santoto Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+       <img src="IMG/esc.png" class="nav-logo" alt="Logo">
+        <div class="nav-brand-text"><span class="nav-name">Santoto Noticias</span><span class="nav-sub">Colegio Santo Tomás de Aquino</span></div></a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="gobierno.html" class="nav-link">Gobierno</a>
+        <a href="deportes.html" class="nav-link">Deportes</a>
+        <a href="calendario.html" class="nav-link">Calendario</a>
+        <a href="sugerencias.html" class="nav-link active">Buzón</a>
+        <a href="especialidades.html" class="nav-link">Especialidad</a>
+        <a href="chatbot.html" class="nav-link">Asistente</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-header page-header-azul"><div class="container"><div class="page-eyebrow">Tu voz importa</div><h1 class="page-title" style="color: white;">Buzón de Sugerencias</h1><p class="page-eyebrow">Envía tus ideas, comentarios o quejas de forma anónima. El equipo editorial responderá.</p></div></div>
+
+  <div class="container" style="padding-top:48px;padding-bottom:60px">
+    <div class="sug-layout">
+      <!-- FORMULARIO -->
+      <div class="sug-form-wrap">
+        <h2 class="sug-form-title">Enviar sugerencia</h2>
+        <div class="form-group">
+          <label class="form-label">Categoría</label>
+          <select class="form-input" id="sug-cat">
+            <option>General</option><option>Infraestructura</option><option>Académico</option>
+            <option>Arte</option><option>Convivencia</option><option>Deportes</option>
+            <option>Tecnología</option><option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tu curso <span style="color:#aaa;font-weight:400">(opcional)</span></label>
+          <input class="form-input" id="sug-curso" placeholder="Ej: 901, 1102..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tu sugerencia o comentario</label>
+          <textarea class="form-input form-textarea" id="sug-texto" placeholder="Escribe aquí tu mensaje. Se enviará de forma anónima..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="enviarSugerencia()">Enviar sugerencia →</button>
+        <p class="form-note">Tu identidad nunca será revelada. El equipo editorial leerá y responderá tu mensaje.</p>
+      </div>
+
+      <!-- SUGERENCIAS RECIENTES -->
+      <div class="sug-list-wrap">
+        <h2 class="sug-form-title">Sugerencias recientes</h2>
+        <div id="sug-lista"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>© 2026 Noticiero Estudiantil</span></div></div></footer>
+  <script src="data.js"></script><script src="main.js"></script>
+</body>
+</html>
