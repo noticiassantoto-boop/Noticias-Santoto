@@ -52,7 +52,7 @@ if (document.getElementById('noticias-grid')) {
   // Noticias secundarias (sin la primera)
   const grid = document.getElementById('noticias-grid');
   if (grid) {
-    const nots = DATA.noticias.slice(1, 5);
+const nots = (DATA?.noticias || []).slice(1, 5);
     grid.innerHTML = nots.map(n => `
       <div class="noticia-card fade-in" onclick="abrirModal(${n.id})">
         <div class="nc-img" style="${!n.imagen ? `background:${n.color}20` : ''}">
