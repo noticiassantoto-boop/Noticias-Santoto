@@ -345,7 +345,15 @@ function loadData() {
     if (s) {
       const p = JSON.parse(s);
       if (!p.gobierno) p.gobierno = JSON.parse(JSON.stringify(DEFAULT_DATA.gobierno));
-      return p;
+return {
+  ...DEFAULT_DATA,
+  ...p,
+  noticias: Array.isArray(p.noticias) ? p.noticias : DEFAULT_DATA.noticias,
+  eventos: Array.isArray(p.eventos) ? p.eventos : DEFAULT_DATA.eventos,
+  deportes: Array.isArray(p.deportes) ? p.deportes : DEFAULT_DATA.deportes,
+  gobierno: Array.isArray(p.gobierno) ? p.gobierno : DEFAULT_DATA.gobierno,
+  sugerencias: Array.isArray(p.sugerencias) ? p.sugerencias : DEFAULT_DATA.sugerencias
+};
     }
     return JSON.parse(JSON.stringify(DEFAULT_DATA));
   } catch(e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
