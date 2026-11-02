@@ -9,6 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <script>
+  // Comprueba si hay una versión nueva del sitio al entrar.
+  (() => {
+    if (!('serviceWorker' in navigator)) return;
+
+    if (sessionStorage.getItem('sn_sw_reloading')) {
+      sessionStorage.removeItem('sn_sw_reloading');
+    }
+
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!sessionStorage.getItem('sn_sw_reloading')) {
+        sessionStorage.setItem('sn_sw_reloading', '1');
+        window.location.reload();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
+        .then(reg => reg.update())
+        .catch(err => console.warn('No se pudo comprobar la actualización:', err));
+    });
+  })();
+  </script>
 </head>
 <body>
 
@@ -164,8 +187,8 @@
    <footer class="footer"><div class="container"><div class="footer-bottom" style="justify-content:center"><span>© 2026 Noticiero Estudiantil</span></div></div></footer>
   </footer>
 
-<script src="data.js?v=2"></script>
-<script src="main.js?v=2"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
   <script>
     function toggleEsp(id) {
       const card = document.getElementById(id);

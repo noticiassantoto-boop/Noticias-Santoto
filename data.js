@@ -340,25 +340,36 @@ sugerencias: [],
 };
 
 function loadData() {
+  // Los contenidos editoriales de data.js son la fuente principal.
+  // Así, noticias y eventos nuevos publicados en GitHub no quedan ocultos
+  // por copias antiguas guardadas en el navegador.
+  const fresh = JSON.parse(JSON.stringify(DEFAULT_DATA));
+
   try {
-    const s = localStorage.getItem('sn_web_v1');
-    if (s) {
-      const p = JSON.parse(s);
-      if (!p.gobierno) p.gobierno = JSON.parse(JSON.stringify(DEFAULT_DATA.gobierno));
-return {
-  ...DEFAULT_DATA,
-  ...p,
-  noticias: Array.isArray(p.noticias) ? p.noticias : DEFAULT_DATA.noticias,
-  eventos: Array.isArray(p.eventos) ? p.eventos : DEFAULT_DATA.eventos,
-  deportes: Array.isArray(p.deportes) ? p.deportes : DEFAULT_DATA.deportes,
-  gobierno: Array.isArray(p.gobierno) ? p.gobierno : DEFAULT_DATA.gobierno,
-  sugerencias: Array.isArray(p.sugerencias) ? p.sugerencias : DEFAULT_DATA.sugerencias
-};
+    const saved = JSON.parse(localStorage.getItem('sn_web_v1') || 'null');
+
+    // Se conservan las sugerencias locales del dispositivo.
+    // Noticias, eventos, deportes y gobierno siempre se cargan desde data.js.
+    if (saved && Array.isArray(saved.sugerencias)) {
+      fresh.sugerencias = saved.sugerencias;
     }
-    return JSON.parse(JSON.stringify(DEFAULT_DATA));
-  } catch(e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+  } catch (e) {
+    console.warn('No se pudieron recuperar las sugerencias locales:', e);
+  }
+
+  return fresh;
 }
-function saveData(d) { localStorage.setItem('sn_web_v1', JSON.stringify(d)); }
+
+function saveData(d) {
+  try {
+    // Guardar solo sugerencias para no bloquear futuras actualizaciones.
+    localStorage.setItem('sn_web_v1', JSON.stringify({
+      sugerencias: Array.isArray(d.sugerencias) ? d.sugerencias : []
+    }));
+  } catch (e) {
+    console.warn('No se pudieron guardar las sugerencias locales:', e);
+  }
+}
 
 // Disponible globalmente
 const DATA = loadData();
