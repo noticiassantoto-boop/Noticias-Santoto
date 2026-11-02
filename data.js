@@ -44,6 +44,13 @@ const DEFAULT_DATA = {
       cuerpo: 'Horacio Pedraza Becerra, rector del Instituto Técnico Santo Tomás de Aquino, es postulado a Gigante en Educación con Sentido Humano por su compromiso constante con la formación integral y el bienestar de cada estudiante.\n\nSu liderazgo cercano, su entrega diaria y su visión humana han convertido a la institución en un espacio donde aprender también significa crecer, soñar y construir un mejor futuro.🚀',
       autor: 'Área de Tecnología', fecha: '2025-11-26',
     },
+       {
+      id: 6, destacada: false, icon: '🏆', imagen: 'IMG/banda2026.png', categoria: 'Institucional', color: '#87a9db',
+      titulo: 'Banda Heraldica',
+      resumen: 'La Banda Heráldica del Colegio Santo Tomás de Aquino, bajo la dirección del profesor Andrés Niño, continúa destacándose por su talento, disciplina y dedicación,',
+      cuerpo: 'La Banda Heráldica del Colegio Santo Tomás de Aquino, bajo la dirección del profesor Andrés Niño, continúa destacándose por su talento, disciplina y dedicación, participando en diferentes concursos y obteniendo importantes reconocimientos.\n\n A lo largo de su trayectoria, la banda ha conseguido premios como Mejor Grupo de Liras y Mejor Grupo de Percusión, demostrando el esfuerzo y la preparación de todos sus integrantes.\n\nEn su más reciente concurso, la banda volvió a brillar al obtener el reconocimiento a Mejor Tambor Mayor y conquistar el primer puesto en la categoría Tradicional Latina. 🏆🥁\n\nEstos logros son motivo de orgullo para toda la comunidad SANTOTO y reflejan la pasión por la música, la disciplina y el trabajo en equipo que caracteriza a nuestros estudiantes.\n\n También queremos destacar a Didier Reyes, bastonero de la Banda Heráldica, quien se ha convertido en una figura destacada por su excelente desempeño. En cada batalla de bastones en la que ha participado, Didier ha conseguido la victoria, demostrando su talento, disciplina y dedicación.\n\n ¡Felicitaciones a Didier Reyes, a la Banda Heráldica y al profesor Andrés Niño por seguir dejando en alto el nombre del SANTOTO y demostrando su talento, disciplina y pasión por la música! 🥁🎶🏆',      
+      autor: 'Área de Tecnología', fecha: '2025-11-26',
+    },
 
   ],
   deportes: [
